@@ -28,7 +28,7 @@ public class HttpRequest {
         InetAddress IpAddr = InetAddress.getByName(url.getHost());
 
         // Se a URL não tiver um path, adiciona "/" (página inicial)
-        String path = url.getPath() == "" ? "/" : url.getPath();
+        String path = url.getPath().equals("") ? "/" : url.getPath();
 
         // Cria socket de conexão
         int port = 80;
